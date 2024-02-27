@@ -1,1 +1,21 @@
+1
+class Point():
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
+2
+class Point():
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def move(self, x, y):
+        self.x += x
+        self.y += y
+
+    def length(self, point):
+        x = abs(self.x - point.x)
+        y = abs(self.y - point.y)
+        z = (x ** 2 + y ** 2) ** 0.5
+        return round(z, 2)
