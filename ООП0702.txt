@@ -1,0 +1,65 @@
+1 класс MusicAlbum
+import random
+class MusikAlbum():
+    def __init__(self, title, artist, relase_year, gener, tracklist):
+        self.title = title
+        self.artist = artist
+        self.relase_year = relase_year
+        self.gener = gener
+        self.tracklist = tracklist
+    
+    def vividclassa(self):
+        print("Назване:" , self.title)
+        print("Исполнитель:" , self.artist)
+        print("Год:" , self.relase_year)
+        print("Жанр:" , self.gener)
+        print("Треки:" , self.tracklist)
+        
+    def play_random_track(self):  
+        print("Воспроизводится трек: ", random.choice(self.tracklist))
+
+grup1 = MusikAlbum("Deuschland", "Rummstein", "2019", "Mew Deusch Harte", ["Deuschland", "Radio", "Zeig dich"])
+
+grup1.vividclassa()
+grup1.play_random_track()
+
+
+2 класс Student
+class Student:
+    def __init__(self, name, age, grade, scores):
+        self.name = name
+        self.age = age
+        self.grade = grade
+        self.scores = scores
+    
+    def average_score(self):
+        if self.scores:
+            return sum(self.scores) / len(self.scores)
+        else:
+            return 0
+    
+student = Student("John", 18, 12, [5, 4, 4, 5])  
+print("Имя:", student.name)  
+print("Возраст:", student.age) 
+print("Класс:", student.grade) 
+print("Оценки:", student.scores) 
+print("Средний балл:", student.average_score())
+
+3 класс Recipe 
+class Recipe:
+    def __init__(self, name, ingredients):
+        self.name = name
+        self.ingredients = ingredients
+    
+    def print_ingredients(self):
+        print("Продукты для блюда", self.name + ":")
+        for ingredient in self.ingredients:
+            print("-", ingredient)
+    
+    def cook(self):
+        print("Готовим блюдо", self.name + "!")
+        print("Блюдо", self.name, "готово!")
+
+recipe = Recipe("Пицца", ["томаты", "сыр", "зелень", "специи", "основа для пиццы"])
+recipe.print_ingredients()
+recipe.cook()
