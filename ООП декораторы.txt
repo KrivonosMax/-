@@ -10,8 +10,7 @@ def measure_time(func):
     return wrapper
 
 @measure_time
-def do_some_work():
-    time.sleep(3)
+def work():
+    time.sleep(5)
     print("good")
-
-do_some_work()
+work()
