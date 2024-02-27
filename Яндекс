@@ -17,3 +17,14 @@ class Point:
     def length(self, point):
         result = ((point.x - self.x) ** 2 + (point.y - self.y) ** 2) ** 0.5
         return round(result, 2)
+3
+class RedButton():
+    def __init__(self):
+        self.x = 0
+
+    def click(self):
+        print("alarm!")
+        self.x += 1
+
+    def count(self):
+        return self.x
